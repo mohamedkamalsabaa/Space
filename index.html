@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Discover New Worlds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Space Travel</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <h1>Discover New Horizons in Space</h1>
+            <p>Book your space journey now and experience the unforgettable</p>
+            <button class="cta-button" aria-label="Book your trip">Book Now</button>
+        </section>
+
+        <section id="search" class="search-section">
+            <div class="search-container">
+                <h2>Search Your Trip</h2>
+                <form class="search-form">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="" disabled selected>Select destination</option>
+                            <option value="moon">Moon</option>
+                            <option value="mars">Mars</option>
+                            <option value="iss">International Space Station</option>
+                            <option value="venus">Venus</option>
+                            <option value="jupiter">Jupiter Stations</option>
+                            <option value="saturn">Saturn Rings</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Travel Date</label>
+                        <input type="date" id="date" name="date" title="Select travel date">
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Number of Passengers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" title="Enter number of passengers">
+                    </div>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

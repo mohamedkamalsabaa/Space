@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                <span>Space Travel</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <section class="dashboard-header">
+            <h1>Welcome Back, Explorer</h1>
+            <p>Manage your space journey</p>
+            <div class="user-status">
+                <div class="status-badge">
+                    <i class="fas fa-star"></i>
+                    Gold Member
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-grid">
+            <div class="dashboard-card upcoming-trips">
+                <h2><i class="fas fa-rocket"></i>Upcoming Trips</h2>
+                <div class="trip-item">
+                    <div class="trip-info">
+                        <h3>Moon Explorer</h3>
+                        <p>Departure: Dec 25, 2024</p>
+                        <div class="trip-status">
+                            <span class="status-dot"></span>
+                            Confirmed
+                        </div>
+                    </div>
+                    <button class="manage-button">Manage</button>
+                </div>
+                <div class="trip-countdown">
+                    <p>Time until departure:</p>
+                    <div class="countdown-timer">
+                        <span>350</span> days
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card profile">
+                <h2><i class="fas fa-user-astronaut"></i>Profile</h2>
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="profile-details">
+                        <h3>Mohamed</h3>
+                        <p>Space Explorer Level: Gold</p>
+                        <div class="explorer-stats">
+                            <div class="stat">
+                                <span>3</span>
+                                Trips
+                            </div>
+                            <div class="stat">
+                                <span>15K</span>
+                                Miles
+                            </div>
+                        </div>
+                        <button class="edit-profile">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card preferences">
+                <h2><i class="fas fa-cog"></i>Travel Preferences</h2>
+                <form class="preferences-form">
+                    <div class="form-group">
+                        <label for="preferred-destination">Preferred Destination</label>
+                        <select id="preferred-destination" name="preferred-destination">
+                            <option>Moon</option>
+                            <option>Mars</option>
+                            <option>ISS</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="accommodation-type">Accommodation Type</label>
+                        <select id="accommodation-type" name="accommodation-type">
+                            <option>Luxury Suite</option>
+                            <option>Standard Pod</option>
+                            <option>Research Quarter</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notification-preference">Notification Preferences</label>
+                        <div class="toggle-switches">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                                Email
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                                SMS
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="save-button">Save Preferences</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Available Trips</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Space Travel</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="trips-page">
+        <section class="trips-hero">
+            <h1>Available Space Trips</h1>
+            <div id="searchResults" class="search-results">
+                <!-- سيتم ملء هذا القسم ديناميكياً -->
+            </div>
+            <p>Choose your next adventure among our carefully curated space journeys</p>
+        </section>
+
+        <section class="trips-grid">
+            <div class="trip-card">
+                <div class="trip-price">$250,000</div>
+                <div class="trip-image moon"></div>
+                <div class="trip-content">
+                    <h3>Moon Explorer</h3>
+                    <p>3-day journey to Earth's natural satellite</p>
+                    <ul class="trip-features">
+                        <li><i class="fas fa-clock"></i>3 Days</li>
+                        <li><i class="fas fa-user-astronaut"></i>Max 6 people</li>
+                        <li><i class="fas fa-rocket"></i>Direct Flight</li>
+                        <li><i class="fas fa-wifi"></i>Space Internet</li>
+                    </ul>
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <div class="trip-price">$500,000</div>
+                <div class="trip-image mars"></div>
+                <div class="trip-content">
+                    <h3>Mars Adventure</h3>
+                    <p>2-week expedition to the Red Planet</p>
+                    <ul class="trip-features">
+                        <li><i class="fas fa-clock"></i>14 Days</li>
+                        <li><i class="fas fa-user-astronaut"></i>Max 4 people</li>
+                        <li><i class="fas fa-rocket"></i>Premium Cabin</li>
+                        <li><i class="fas fa-utensils"></i>Gourmet Meals</li>
+                    </ul>
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <div class="trip-price">$350,000</div>
+                <div class="trip-image iss"></div>
+                <div class="trip-content">
+                    <h3>ISS Experience</h3>
+                    <p>Visit the International Space Station</p>
+                    <ul class="trip-features">
+                        <li><i class="fas fa-clock"></i>5 Days</li>
+                        <li><i class="fas fa-user-astronaut"></i>Max 3 people</li>
+                        <li><i class="fas fa-microscope"></i>Lab Access</li>
+                        <li><i class="fas fa-camera"></i>Photo Sessions</li>
+                    </ul>
+                    <button class="book-button">Book Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
