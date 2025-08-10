@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // التحقق مما إذا كنا في صفحة الرحلات
+
     if (window.location.pathname.includes('trips.html')) {
-        // استرجاع معايير البحث من localStorage
         const searchParams = localStorage.getItem('searchParams');
         if (searchParams) {
             const params = JSON.parse(searchParams);
             const searchResults = document.getElementById('searchResults');
             
-            // إظهار معايير البحث
             searchResults.innerHTML = `
                 <div class="search-summary">
                     <p>Showing results for:</p>
@@ -19,12 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             
-            // مسح معايير البحث بعد عرضها
             localStorage.removeItem('searchParams');
         }
     }
 
-    // Initialize minimum date (today)
     const dateInput = document.getElementById('date');
     const today = new Date();
     const minDate = today.toISOString().split('T')[0];
@@ -59,14 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
         searchButton.innerHTML = 'Searching...';
         searchButton.style.opacity = '0.7';
         
-        // حفظ معايير البحث في localStorage
         localStorage.setItem('searchParams', JSON.stringify({
             destination,
             date,
             passengers
         }));
         
-        // التحويل إلى صفحة الرحلات
         window.location.href = 'trips.html';
     });
 
@@ -150,7 +144,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// إضافة معالج النقر لأزرار الحجز
 document.querySelectorAll('.book-button').forEach(button => {
     button.addEventListener('click', function() {
         const tripCard = this.closest('.trip-card') || this.closest('.accommodation-card');
@@ -160,28 +153,22 @@ document.querySelectorAll('.book-button').forEach(button => {
             duration: tripCard.querySelector('.trip-features li:first-child')?.textContent || '-'
         };
         
-        // حفظ معلومات الحجز في localStorage
         localStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
         
-        // الانتقال إلى صفحة الدفع
         window.location.href = 'payment.html';
     });
 });
 
-// التحقق من وجود معلومات الحجز في صفحة الدفع
 if (window.location.pathname.includes('payment.html')) {
     const bookingInfo = JSON.parse(localStorage.getItem('bookingInfo') || '{}');
     
-    // ملء ملخص الحجز
     document.getElementById('bookingType').textContent = bookingInfo.type || '-';
     document.getElementById('duration').textContent = bookingInfo.duration || '-';
     document.getElementById('totalAmount').textContent = bookingInfo.price || '-';
     
-    // معالجة تأكيد الدفع
     document.getElementById('confirmPayment').addEventListener('click', function(e) {
         e.preventDefault();
         
-        // التحقق من صحة النموذج
         const passengerForm = document.getElementById('passenger-form');
         const paymentForm = document.getElementById('payment-form');
         
